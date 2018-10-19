@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Bare - Start Bootstrap Template</title>
+  <title>Callum Drennan Portfolio</title>
 
   <!-- Bootstrap core CSS -->
   <link href="files/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -58,17 +58,33 @@
         <ul class="list-unstyled">
           <li>Current Project</li>
           <li>
-            <p>This is  Game that i have been working on. I have called it Darknight. it uses Box2D for the in world physics
-              as well as Fmod for the sound SDL for rendering</p>
-            around every sprite is a box that handles the collision between the objects. This is in the world of Box2D which also controls
-            the gravity and the movement of the sprites. The player sprite moves by using ApplyLinearImpulse() currently
-            the enemies(the guys in red) have no AI and the collision between the player and them does not register an event.</p>
-            <p>currently there is no sprite for moving right in both attack, movment and jumping. The attack animation currently
-              spawns a box2d body as a sensor righ in frount of the player. this then collides with every thing around it
-              but only registors if the the box happens to collide with enemies this is a work and progress and will be compleated
-              with in the next few months
+            <p>This is the game that i have been working on. I have called it Darknight. It uses Box2D for the in world physics,
+            as well as Fmod for the sound and SDL for rendering.
+            Around every sprite is a box that handles the collision between the objects. This is in the world of Box2D, which also controls
+            the gravity and the movement of the sprites. The player sprite moves by using ApplyLinearImpulse(). 
+            The enemies(the guys in red) have no AI and the collision between the player and the enemies do not register an event.
+            Currently there is no player sprite moving right for attack, movment and jumping. The attack animation currently
+            spawns a box2d body as a sensor right in front of the player. This then collides with every thing around it
+            but only registers if the the box happens to collide with enemies. This is a work in progress and will be completed
+            within the next few months.
             </p>
+
             <object width="560" height="315" data="https://www.youtube.com/embed/D-ccSnFveA4"></object>
+            <ul>
+              <h5 class="mt-5">Lessions learned</h5>
+
+              <p>
+                  Before i begain the project i had never used the box2D framwork before. so there was a large learning curve to get this towork 
+                  when i started with darwing sprite in the game the sprites would draw at there pixel coordanates there (x,y) on the screen.
+                  as box2D used meters in the world we had to convert from pixels to meters. i developed this code below to convert my box2d code to work with piexel coordanates.
+                  this code takes the positions of the b2vec2 (x,y
+                 
+              </p>
+              <div class="container">
+                  <img src="images/drawingbox2d.PNG" alt="box2d drawing code" width="400" height="300">
+              </div>
+             
+            </ul>
           </li>
         </ul>
       </div>
