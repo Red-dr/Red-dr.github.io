@@ -59,15 +59,14 @@
           <li>Current Project</li>
           <li>
             <p>This is the game that i have been working on. I have called it Darknight. It uses Box2D for the in-world physics,
-              as well as Fmod for the sound and SDL for rendering.
-              Around every sprite is a box that handles the collision between the objects. This is in the world of Box2D, which also controls
-              the gravity and the movement of the sprites. The player sprite moves by using ApplyLinearImpulse(). 
-              The enemies (the guys in red) have no AI and the collision between the player and the enemies do not register an event.
-              Currently there is no player sprite moving right for attack, movement and jumping. The attack animation currently
-              spawns a box2d body as a sensor right in front of the player. This then collides with everything around it
-              but only registers if the box happens to collide with enemies. This is a work in progress and will be completed
-              within the next few months.
-  
+              as well as Fmod for the sound and SDL for rendering. Around every sprite is a box that handles the collision
+              between the objects. This is in the world of Box2D, which also controls the gravity and the movement of the
+              sprites. The player sprite moves by using ApplyLinearImpulse(). The enemies (the guys in red) have no AI and
+              the collision between the player and the enemies do not register an event. Currently there is no player sprite
+              moving right for attack, movement and jumping. The attack animation currently spawns a box2d body as a sensor
+              right in front of the player. This then collides with everything around it but only registers if the box happens
+              to collide with enemies. This is a work in progress and will be completed within the next few months.
+
             </p>
 
             <object width="560" height="315" data="https://www.youtube.com/embed/D-ccSnFveA4"></object>
@@ -75,46 +74,51 @@
               <h5 class="mt-5">Lessions learned</h5>
 
               <p>
-                Before I began the project I had never used the box2D framework before. so there was a large learning curve to get this to work 
-                when i started with drawing sprite in the game the sprites would draw at their pixel coordinates there (x,y) on the screen.
-                as box2D used meters in the world we had to convert from pixels to meters. i developed this code below to convert my box2d code to work with pixel coordinates.
-                this code takes the positions of the b2vec2 (x,y) it then uses those coordinates to get the other coordinates for the sides of the box and multiplies them by 
-                30 (PTM) to get the location of the of the Body in the box2d world and draw them in the correct place.
+                Before I began the project I had never used the box2D framework before. so there was a large learning curve to get this to
+                work when i started with drawing sprite in the game the sprites would draw at their pixel coordinates there
+                (x,y) on the screen. as box2D used meters in the world we had to convert from pixels to meters. i developed
+                this code below to convert my box2d code to work with pixel coordinates. this code takes the positions of
+                the b2vec2 (x,y) it then uses those coordinates to get the other coordinates for the sides of the box and
+                multiplies them by 30 (PTM) to get the location of the of the Body in the box2d world and draw them in the
+                correct place.
 
-                 
+
               </p>
               <div class="container">
-                  <img src="images/drawingbox2d.PNG" alt="box2d drawing code" width="400" height="300">
+                <img src="images/drawingbox2d.PNG" alt="box2d drawing code" width="400" height="300">
               </div>
 
               <p>
-                  another feature that I wanted to employ was only being able to jump when touching certain items for example you cannot jump off the enemies as you should be 
-                  taking damage from them. later in the game I would like to apply double height jumps from some platforms to allow you to get to the next.
-                  below you will see my first attempt at deploying this. at first, I made a sensor that fixed to the bottom of the players Box2d Box that would count how many 
-                  things it was touching and if that was greater than 2 you could jump. so, if you were touching a platform it was allow you to jump. this worked well 
-                  as i was able to jump when touching the platform and not when i was in the jump animation. this also came with an unexpected benefit. with this code I was able to 
-                  move quite freely across the platform and even though there where mini jumps that where happening when the player moved (this happens because of friction)
-                  as the sensor was still touching the platform I could still jump. 
+                another feature that I wanted to employ was only being able to jump when touching certain items for example you cannot jump
+                off the enemies as you should be taking damage from them. later in the game I would like to apply double
+                height jumps from some platforms to allow you to get to the next. below you will see my first attempt at
+                deploying this. at first, I made a sensor that fixed to the bottom of the players Box2d Box that would count
+                how many things it was touching and if that was greater than 2 you could jump. so, if you were touching a
+                platform it was allow you to jump. this worked well as i was able to jump when touching the platform and
+                not when i was in the jump animation. this also came with an unexpected benefit. with this code I was able
+                to move quite freely across the platform and even though there where mini jumps that where happening when
+                the player moved (this happens because of friction) as the sensor was still touching the platform I could
+                still jump.
               </p>
 
               <div class="container">
-                  
-                  <img src="images/contactlistner.PNG" alt="contact listener code" width="400" height="300">
-                  <img src="images/canjumpnow.PNG" alt="canjumpnow" width="400" height="200">
+
+                <img src="images/contactlistner.PNG" alt="contact listener code" width="400" height="300">
+                <img src="images/canjumpnow.PNG" alt="canjumpnow" width="400" height="200">
               </div>
               <p>
-                  when using this code, it worked well until I realised that I could jump of the enemies as they would count as a fixture that the sensor
-                  this would also not allow me to reuse the code for future use or allow me to use the code to check if the object I was standing on could be a different 
-                  fixture.
-                  I modified the code to use entity’s as the platforms the characters and the enemies are all entity’s this allows me to use the code for checking the 
-                  platform for special platforms it will also be useful for future projects.
-  
+                when using this code, it worked well until I realised that I could jump of the enemies as they would count as a fixture that
+                the sensor this would also not allow me to reuse the code for future use or allow me to use the code to check
+                if the object I was standing on could be a different fixture. I modified the code to use entity’s as the
+                platforms the characters and the enemies are all entity’s this allows me to use the code for checking the
+                platform for special platforms it will also be useful for future projects.
+
               </p>
               <div>
-                  <img src="images/contactlistnerentitys.PNG" alt="canjumpnow" width="500" height="200">
+                <img src="images/contactlistnerentitys.PNG" alt="canjumpnow" width="500" height="200">
               </div>
-                
-             
+
+
             </ul>
           </li>
         </ul>

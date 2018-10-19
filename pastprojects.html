@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
- 
+
 
     <!-- Bootstrap core CSS -->
     <link href="files/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -59,27 +59,30 @@
                 <p class="lead">below is a list of the past projets that i have attempted </p>
                 <ul>
 
-                    <p> below is a video of a clone of space invaders that i was making for a game prgraming class at UNI it
+                    <p> Below is a video of a clone of space invaders that i was making for a game programming class at UNI it
                         is made in SDL and uses vectors for the drawing of the sprites. currently the collision is based
-                        in circle to circle and its all ways checcking for a colision so it is not performance wize the best
-                        idea in future i plan to refactor this code to alow it be be more optimal perhaps add in box2D to
-                        check for collision. i will also be chaning the vectors to opject pools and add in some partiacal
-                        sytems for when the bad guys explode. sound will be added using Fmod aswell currentl this is a work
-                        and progress that is for a bit of fun </p>
+                        in circle to circle and it’s all ways checking for a collision, so it is not performance wise the
+                        best idea in future I plan to refactor this code to allow it to be more optimal perhaps add in box2D
+                        to check for collision. I will also be changing the vectors to object pools and add in some piratical
+                        systems for when the bad guys explode. sound will be added using Fmod as well currently this is a
+                        work and progress that is for a bit of fun.
+                    </p>
                     <object width="560" height="315" data="https://www.youtube.com/embed/GQRLruw6QZI"></object>
 
 
                 </ul>
                 <ul>
                     <p> Below you see one of my projects that I was working on in computer graphics class at University. it is
-                        written in Java using OpenGL2 framework its a submarine with a texture as well as a sand textured
+                        written in Java using OpenGL2 framework it’s a submarine with a texture as well as a sand textured
                         ocean floor. the challenges I faced in this project were attaching the textures to the submarine
                         and ocean floor and enabling the Fog that you see. the fog color kept changing everything so that
                         the whole scene will be blue rather than its respective colors. after talking with people and lots
-                        of stack overflow i found out that this was happening becoude i hadent added the texture matrix also
-                        the third person camera with movent controls as you can move the camera around the submarine as you
-                        can see whilst also being able to move it. everything is in a push pop matrix. i have inclueded my
-                        work log for this project in the downloads section of this portfolio or click here
+                        of stack overflow I found out that this was happening because I hadn’t added the texture matrix also
+                        the third person camera with movement controls as you can move the camera around the submarine as
+                        you can see whilst also being able to move it. everything is in a push pop matrix. I have included
+                        me work log for this project in the downloads section of this portfolio or you can click the link
+                        below
+
                         <a class="nav-link" href="PDF/callum.drennan.log.pdf">graphics logbook</a>
 
                     </p>
@@ -90,35 +93,59 @@
                     <p>
                         below is the first attempt at making the third person camera. in this video, it only moves around the x and z-axis with ++x
                         and ++z. it also has rotate enabled this was just to get the maths and the know-how in my head on
-                        how to make the camera fallow the submarine.
-                        <object width="560" height="315" data="https://www.youtube.com/embed/oH46a62JjmE"></object>
+                        how to make the camera follow the submarine. This code would not really work for anything but looking
+                        at how the submarine looks as the camera is looking as a static location and it will need to follow
+                        the submarines movement though the world.
                     </p>
-                </ul>
-            
+                    <object width="560" height="315" data="https://www.youtube.com/embed/oH46a62JjmE"></object>
 
-                <p> below you see the solar system that I made in class using a template that the tutor gave us the planets are
-                    all in there own entity sub derived from a planet class they all have there size, positions, and time
+                </ul>
+
+
+                <p> elow you see the solar system that I made in class using a template that the tutor gave us the planets are
+                    all in their own entity sub derived from a planet class they all have their size, positions, and time
                     to rotate relative to the sun the sun being at 0,0,0. all the planets are in a push pop matrix with gl.gltranslate
-                    moving them away and around the sun. my struggles with this were getting the first person camera logic
-                    in my head and all the trigonometry that goes along with it.</p>
+                    moving them away and around the sun. my struggles with this were getting the first-person camera logic
+                    in my head and all the trigonometry that goes along with it.
+                </p>
                 <object width="560" height="315" data="https://www.youtube.com/embed/l-nUrSeQbQk"></object>
 
                 <ul>
                     <p>
                         below is my first play with OpenGL where I made a planet with asteroids and atmosphere. my struggle with this was the particle
                         system that we made to spawn the asteroids as it needed to randomize the asteroids as they spawned
-                        with a differnt amount of points and edges also the place in which the spawn and how high. </p>
+                        with a different amount of points and edges also the place in which the spawn and how high. One of
+                        the main problems I had in this project was learning how to adapt trigonometry in to use in the opengl
+                        world. I over came this by talking with the teacher and with help from my peers. The asteroids that
+                        you see are set up with random sizes and random edges. I developed this code below to make them initialise
+                        with those random values. Then draw them on the screen using a triangle fan. The next step was then
+                        making them work with a particle system the difficulty I had with this task was making an array of
+                        asteroids it only took a small talk with the teacher to get my head around it. I then used the INIT
+                        on the particle system to INIT the asteroids to then draw. The draw calls the asteroids draw method
+                        and the think of the particle system then goes though the array of asteroids and calls the asteroids
+                        think.
+
+                    </p>
+
 
                     <object width="560" height="315" data="https://www.youtube.com/embed/pBFjtK26Tr0"></object>
-
+                    <div class="container">
+                        <img src="images/asteriodconstuctor.PNG" alt="asteriod constuctor" width="400" height="200">
+                        <img src="images/asteriodinit.PNG" alt="asteriod init" width="400" height="200">
+                    </div>
+                    <div class="container">
+                        <img src="images/asterioddraw.PNG" alt="asteriod constuctor" width="400" height="200">
+                        <img src="images/partaclesystem init.PNG" alt="asteriod init" width="400" height="200">
+                    </div>
                 </ul>
                 <ul>
                     <p>
-                        below is a link to a link list data stucture that i made in our DSA class. this was an assinment that was given to us to
-                        build a data stucture and then test that stucture with data and a load to see how it performs we
-                        then had to right a report on our findings explaing them which you can see below i discoverd that
-                        a linklist is not the best form of data stucture espesaly for alot of data to store but in smaller
-                        lists it performs adiqutly.
+                        Below is a link to a link list data structure that I made in our DSA class. this was an assignment that was given to us to
+                        build a data structure and then test that structure with data and a load to see how it performs we
+                        then had to right a report on our findings explain them which you can see below. I discovered that
+                        a link list is not the best form of data structure especially for a lot of data to store. But in
+                        smaller lists it performs adequately.
+
                         <a class="nav-link" href="https://github.com/Red-dr/DSA/tree/master/assingment-03-actual"> DSA linked list report data </a>
                         <a class="nav-link" href="PDF/design.pdf">Report PDF</a>
                     </p>
@@ -126,32 +153,46 @@
                 </ul>
                 <ul>
                     <p>
-                        here is a link to my Data stuctures and algorithems course work. in this class i learnd about j unit tests and how the make
-                        sure that the code we wrote is robust and does what it was entended to do. we learned about optionals
-                        to make sure that the data being returned was actualy data and not a null value
+                        here is a link to my Data structures and algorithms course work. in this class we learned about j unit tests and how the
+                        make sure, that the code we wrote is robust and does what it was intended to do. Before this class
+                        I had not heard of test-driven development and how to keep the code that we had robust and working
+                        the way that was intended. We also where told about binary trees red, black tress and ways of sorting
+                        data. we also learned about optionals and how they work to make sure that the data being returned
+                        was actually data and not a null value. You are welcome to look thought the lab work that I have
+                        done. Thought this class I have a greater understanding of data stuctures. However, I still need
+                        more practice in this area as I still cant make a red black tree.
+
                         <a class="nav-link" href="https://github.com/Red-dr/DSA">Data Stuctures</a>
                     </p>
                 </ul>
                 <ul>
                     <P>
-                        here is the link to my first game that i made. its a text baced game made in java that loads in a text file it was an assinment
-                        that we had to make as a class this was made as we where just learning java before OOP was taught.
-                        looking over this code i would change a few things perhaps making all the text in the game load from
-                        file alowing me to edit the game just but editing the text file this will also allow me to make more
-                        text baced games and just one loader.
+                        here is the link to my first game that I made. it’s a text-based game made in java that loads in a text file it was an assignment
+                        that we had to make as a class this was made as we were just learning java before OOP was taught.
+                        One of the main features that I wanted to put In this code is the ability to modify the amount of
+                        rooms in the map without hard coding the array size. After playing around for a few days asking people
+                        and looking at the Java API to figure out how reading in a file worked I simply made a scan that
+                        would read in the first line from the text file and it would make that the array size. This worked
+                        for my purposes but looking back over it. It doesn’t check to see If the first line is a number or
+                        not meaning that if some one was to play with the text file and place a letter in there it would
+                        break the code. looking over this code I would change a few things perhaps making all the text in
+                        the game load from file allowing me to edit the game just but editing the text file this will also
+                        allow me to make more text based games and just one loader.
+
 
                         <a class="nav-link " href="https://github.com/Red-dr/simple_text_game_java">Text Game</a>
                     </P>
                 </ul>
                 <ul>
                     <p>
-                        here is my first log book that we needed to keep for my first class on Coding. we where coding in c and it was the first
-                        lanuage that i learned. untill resently i didnt think that creating log books would be usefull i
-                        was wrong and i have begun making more of them for each of my projects.
+                        Here is my first log book that we needed to keep for my first class on Coding. we were coding in c and it was the first language
+                        that I learned. until recently I didn’t think that creating log books would be useful I was wrong
+                        and I have begun making more of them for each of my projects.
+
                         <a class="nav-link" href="PDF/programing-journal.pdf">Programing One Log Book </a>
                     </p>
                 </ul>
-            
+
                 </ul>
             </div>
         </div>
