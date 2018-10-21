@@ -37,13 +37,13 @@
                             <a class="nav-link" href="who_Am_I.html">Who I am </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="pastprojects.html">Past Projets</a>
+                            <a class="nav-link" href="pastprojects.html">Past Projects</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="downloads.html">Downloads</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contacts.html">contact</a>
+                            <a class="nav-link" href="contacts.html">Contact</a>
                         </li>
                 </ul>
             </div>
@@ -56,21 +56,30 @@
             <div class="col-lg-12 text-center">
                 <h1 class="mt-5">Past Projects
                 </h1>
-                <p class="lead">below is a list of the past projets that i have attempted </p>
+                <p class="lead">below is a list of the past projects that i have attempted </p>
                 <ul>
-
+                    <h3>Spaceinaders </h3>
+                    <h5>SDL C++ </h5>
                     <p> Below is a video of a clone of space invaders that i was making for a game programming class at UNI it
                         is made in SDL and uses vectors for the drawing of the sprites. currently the collision is based
                         in circle to circle and it’s all ways checking for a collision, so it is not performance wise the
-                        best idea in future I plan to refactor this code to allow it to be more optimal perhaps add in box2D
-                        to check for collision. I will also be changing the vectors to object pools and add in some piratical
-                        systems for when the bad guys explode. sound will be added using Fmod as well currently this is a
-                        work and progress that is for a bit of fun.
+                        best idea this is because its written with a time complexity of n^2. in future I plan to refactor
+                        this code to allow it to be more optimal perhaps add in box2D to check for collision. I will also
+                        be changing the vectors to object pools and add in some piratical systems for when the bad guys explode.
+                        sound will be added using Fmod as well currently this is a work and progress that is for a bit of
+                        fun.
+
                     </p>
                     <object width="560" height="315" data="https://www.youtube.com/embed/GQRLruw6QZI"></object>
+                    <div class="container">
+                        <img src="images/cvc.PNG" alt="cvc" width="400" height="300">
+                        <img src="images/spaceinvaders.PNG" alt="remoevealcode" width="500" height="300">
+                    </div>
 
 
                 </ul>
+                <h3>Submarine </h3>
+                <h5>OpenGL2</h5>
                 <ul>
                     <p> Below you see one of my projects that I was working on in computer graphics class at University. it is
                         written in Java using OpenGL2 framework it’s a submarine with a texture as well as a sand textured
@@ -100,15 +109,50 @@
                     <object width="560" height="315" data="https://www.youtube.com/embed/oH46a62JjmE"></object>
 
                 </ul>
+                <h3>Solor System </h3>
+                <h5>OpenGL2</h5>
+                <ul>
+                    <p> below you see the solar system that I made in class using a template that the tutor gave us the planets
+                        are all in their own entity sub derived from a planet class they all have their size, positions,
+                        and time to rotate relative to the sun the sun being at 0,0,0. all the planets are in a push pop
+                        matrix with gl.gltranslate moving them away and around the sun. my struggles with this were getting
+                        the first-person camera logic in my head and all the trigonometry that goes along with it.
 
 
-                <p> elow you see the solar system that I made in class using a template that the tutor gave us the planets are
-                    all in their own entity sub derived from a planet class they all have their size, positions, and time
-                    to rotate relative to the sun the sun being at 0,0,0. all the planets are in a push pop matrix with gl.gltranslate
-                    moving them away and around the sun. my struggles with this were getting the first-person camera logic
-                    in my head and all the trigonometry that goes along with it.
-                </p>
-                <object width="560" height="315" data="https://www.youtube.com/embed/l-nUrSeQbQk"></object>
+
+
+                    </p>
+                    <object width="560" height="315" data="https://www.youtube.com/embed/l-nUrSeQbQk"></object>
+                    <br>
+                    <br>
+
+                    <p> in this, I learend how to make a first-person cammer and how the camera matrix works with its look at
+                        its position and it up the code below shows my final working camera. the camera's movement of the
+                        eye up and down was the first step and the easiest just plus and minus the y. the forward and back
+                        that you also see in fig.1 calls my movement function in fig.4. in fig.3 you can see how I stopped
+                        the cameras world flipping that happens when you look at some directly up 90 degrees or directly
+                        down 90 degrees. in fig.2 I made some code to stop the memory issues when it comes to rotation greater
+                        than 360 this code will once the rotation gets beyond 360 take the number that is over that amount
+                        say if its 380 degrees and make it = 20 degrees. fig.4 is my main camera movement function it takes
+                        in the cameras current position its yaw and pitch and calculated the new position and look at location
+                        this was my greatest struggle and I had to talk with my tutor a lot to get it right. my initial code
+                        did not use the +cameye[x]; at the end of the calculations. so the camera movement moved the camera
+                        but not when you wanted it to go. once i added that to it however it worked fine
+                    </p>
+                    <div class="container">
+                        fig.1
+                        <img src="images/firstperson1.PNG" alt="firstperson code" width="400" height="200"> fig.2
+                        <img src="images/firstperson2.PNG" alt="firstperson code" width="400" height="200">
+                    </div>
+                    <div class="container">
+                        fig.3
+                        <img src="images/firstpersoncapping.PNG" alt="first person capping" width="400" height="200"> fig.4
+                        <img src="images/firstpersonmovment.PNG" alt="first person movement" width="400" height="200">
+                    </div>
+
+                </ul>
+                <h3>Alien Planet </h3>
+                <h5>OpenGL2</h5>
 
                 <ul>
                     <p>
@@ -123,7 +167,8 @@
                         asteroids it only took a small talk with the teacher to get my head around it. I then used the INIT
                         on the particle system to INIT the asteroids to then draw. The draw calls the asteroids draw method
                         and the think of the particle system then goes though the array of asteroids and calls the asteroids
-                        think.
+                        think. what i learnt with this is how the partical system works. it controls the asteriods how meny
+                        are made and when they perfome there think method.
 
                     </p>
 
@@ -139,6 +184,8 @@
                     </div>
                 </ul>
                 <ul>
+                    <h3>DSA Linked List Report</h3>
+                    <h5>java</h5>
                     <p>
                         Below is a link to a link list data structure that I made in our DSA class. this was an assignment that was given to us to
                         build a data structure and then test that structure with data and a load to see how it performs we
@@ -152,6 +199,8 @@
 
                 </ul>
                 <ul>
+                    <h3>DSA labwork</h3>
+                    <h5>java</h5>
                     <p>
                         here is a link to my Data structures and algorithms course work. in this class we learned about j unit tests and how the
                         make sure, that the code we wrote is robust and does what it was intended to do. Before this class
@@ -166,8 +215,10 @@
                     </p>
                 </ul>
                 <ul>
+                    <h3>Text Based Game</h3>
+                    <h5>java</h5>
                     <P>
-                        here is the link to my first game that I made. it’s a text-based game made in java that loads in a text file it was an assignment
+                        Here is the link to my first game that I made. it’s a text-based game made in java that loads in a text file it was an assignment
                         that we had to make as a class this was made as we were just learning java before OOP was taught.
                         One of the main features that I wanted to put In this code is the ability to modify the amount of
                         rooms in the map without hard coding the array size. After playing around for a few days asking people
@@ -184,6 +235,8 @@
                     </P>
                 </ul>
                 <ul>
+                    <h3>First Programing Journal</h3>
+                    <h5>C</h5>
                     <p>
                         Here is my first log book that we needed to keep for my first class on Coding. we were coding in c and it was the first language
                         that I learned. until recently I didn’t think that creating log books would be useful I was wrong
