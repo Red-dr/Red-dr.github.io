@@ -83,7 +83,7 @@
                 (x,y) on the screen. as box2D used meters in the world we had to convert from pixels to meters. I developed
                 this code below to convert my box2d code to work with pixel coordinates. this code takes the positions of
                 the b2vec2 (x,y) it then uses those coordinates to get the other coordinates for the sides of the box and
-                multiplies them by 30 (PTM) to get the location of the of the Body in the in pixel coordinates.
+                multiplies them by 30 (PTM) to get the location of the Body in the pixel coordinates.
 
               </p>
               <div class="container">
@@ -91,7 +91,7 @@
               </div>
 
               <p>
-                another feature that I wanted to employ was only being able to jump when touching certain items, for example, you cannot jump
+                Another feature that I wanted to employ was only being able to jump when touching certain items. For example, you cannot jump
                 off the enemies as you should be taking damage from them. later in the game, I would like to apply double
                 height jumps from some platforms to allow you to get to the next. below you will see my first attempt at
                 deploying this. at first, I made a sensor that fixed to the bottom of the players Box2d Box that would count
@@ -109,7 +109,7 @@
                 <img src="images/canjumpnow.PNG" alt="canjumpnow" width="400" height="200">
               </div>
               <p>
-                when using this code, it worked well until I realised that I could jump off the enemies as they would count as a fixture that
+                When using this code, it worked well until I realised that I could jump off the enemies as they would count as a fixture that
                 the sensor this would also not allow me to reuse the code for future use or allow me to use the code to check
                 if the object I was standing on could be a different fixture. I modified the code to use entity’s as the
                 platforms the characters and the enemies are all entity’s this allows me to use the code for checking the
